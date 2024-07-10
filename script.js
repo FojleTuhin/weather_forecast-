@@ -3,7 +3,8 @@
 const apiKey = 'e97e308b129a44e48be182937240907'; 
 
 const fetchWeather = (locations) => {
-  fetch(`http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${locations}`)
+  fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${locations}`)
+  // https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${locations}
     .then(res => res.json())
     .then(data => {
       displayWeather(data);
