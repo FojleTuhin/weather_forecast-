@@ -65,7 +65,7 @@ const displayWeather = (data) => {
             </div>
             <div class="weather">
               <p>Feels like</p>
-              <p>${data.current.feelslike_c}</p>
+              <p>${data.current.feelslike_c}<sup>o</sup>C</p>
             </div>
           </div>
           <div class="weather-section">
