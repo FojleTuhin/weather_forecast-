@@ -17,6 +17,7 @@ const displayWeather=(data)=>{
   console.log(data);
   const weatherDataContainer= document.getElementById('weatherDataContainer');
   const location= document.getElementById('location');
+  const allForecast= document.getElementById('allForecast');
 
   // location get
   const weatherLocation = `${data.location.name}, ${data.location.country}`
@@ -24,10 +25,9 @@ const displayWeather=(data)=>{
 
 
 
-//  get all data 
+//  set all data 
 
 const allData= `
-
       <div>
         <div class="content-center">
           <div class="main">
@@ -87,179 +87,73 @@ const allData= `
               <div>
                 <img class="img" src="photos/sunrise.png" alt="">
                 <p>Sunrise</p>
-                <p>6: 30 AM</p>
+                <p>${data.forecast.forecastday[0].astro.sunrise                }</p>
               </div>
 
               <div>
                 <img class="img" src="photos/sunrise.png" alt="">
                 <p>Sunset</p>
-                <p>6: 30 AM</p>
+               <p>${data.forecast.forecastday[0].astro.sunset                }</p>
               </div>
             </div>
             <div class="inside-sunMoon">
               <div>
                 <img class="img" src="photos/moon.png" alt="">
                 <p>Moonrise</p>
-                <p>6: 30 AM</p>
+                <p>${data.forecast.forecastday[0].astro.moonrise                }</p>
               </div>
 
               <div>
                 <img class="img" src="photos/moon.png" alt="">
                 <p>Moonset</p>
-                <p>6: 30 AM</p>
+               <p>${data.forecast.forecastday[0].astro.moonset                }</p>
               </div>
             </div>
           </div>
         </div>
-        <div class="forecast-section">
-          <p class="text ">14 days forecast</p>
-          <div class="all-forecast">
-            <div class="forecast">
-              <p>07/10/2024</p>
-              <div class="inside-forecast">
-                <img class="sun" src="photos/sun.png" alt="">
-                <div>
-                  <p>33 <sup>o</sup></p>
-                  <p>33 <sup>o</sup></p>
-
-                </div>
-              </div>
-            </div>
-            <div class="forecast">
-              <p>07/10/2024</p>
-              <div class="inside-forecast">
-                <img class="sun" src="photos/sun.png" alt="">
-                <div>
-                  <p>33 <sup>o</sup></p>
-                  <p>33 <sup>o</sup></p>
-
-                </div>
-              </div>
-            </div>
-            <div class="forecast">
-              <p>07/10/2024</p>
-              <div class="inside-forecast">
-                <img class="sun" src="photos/sun.png" alt="">
-                <div>
-                  <p>33 <sup>o</sup></p>
-                  <p>33 <sup>o</sup></p>
-
-                </div>
-              </div>
-            </div>
-            <div class="forecast">
-              <p>07/10/2024</p>
-              <div class="inside-forecast">
-                <img class="sun" src="photos/sun.png" alt="">
-                <div>
-                  <p>33 <sup>o</sup></p>
-                  <p>33 <sup>o</sup></p>
-
-                </div>
-              </div>
-            </div>
-            <div class="forecast">
-              <p>07/10/2024</p>
-              <div class="inside-forecast">
-                <img class="sun" src="photos/sun.png" alt="">
-                <div>
-                  <p>33 <sup>o</sup></p>
-                  <p>33 <sup>o</sup></p>
-
-                </div>
-              </div>
-            </div>
-            <div class="forecast">
-              <p>07/10/2024</p>
-              <div class="inside-forecast">
-                <img class="sun" src="photos/sun.png" alt="">
-                <div>
-                  <p>33 <sup>o</sup></p>
-                  <p>33 <sup>o</sup></p>
-
-                </div>
-              </div>
-            </div>
-            <div class="forecast">
-              <p>07/10/2024</p>
-              <div class="inside-forecast">
-                <img class="sun" src="photos/sun.png" alt="">
-                <div>
-                  <p>33 <sup>o</sup></p>
-                  <p>33 <sup>o</sup></p>
-
-                </div>
-              </div>
-            </div>
-            <div class="forecast">
-              <p>07/10/2024</p>
-              <div class="inside-forecast">
-                <img class="sun" src="photos/sun.png" alt="">
-                <div>
-                  <p>33 <sup>o</sup></p>
-                  <p>33 <sup>o</sup></p>
-
-                </div>
-              </div>
-            </div>
-            <div class="forecast">
-              <p>07/10/2024</p>
-              <div class="inside-forecast">
-                <img class="sun" src="photos/sun.png" alt="">
-                <div>
-                  <p>33 <sup>o</sup></p>
-                  <p>33 <sup>o</sup></p>
-
-                </div>
-              </div>
-            </div>
-            <div class="forecast">
-              <p>07/10/2024</p>
-              <div class="inside-forecast">
-                <img class="sun" src="photos/sun.png" alt="">
-                <div>
-                  <p>33 <sup>o</sup></p>
-                  <p>33 <sup>o</sup></p>
-
-                </div>
-              </div>
-            </div>
-            <div class="forecast">
-              <p>07/10/2024</p>
-              <div class="inside-forecast">
-                <img class="sun" src="photos/sun.png" alt="">
-                <div>
-                  <p>33 <sup>o</sup></p>
-                  <p>33 <sup>o</sup></p>
-
-                </div>
-              </div>
-            </div>
-            <div class="forecast">
-              <p>07/10/2024</p>
-              <div class="inside-forecast">
-                <img class="sun" src="photos/sun.png" alt="">
-                <div>
-                  <p>33 <sup>o</sup></p>
-                  <p>33 <sup>o</sup></p>
-
-                </div>
-              </div>
-            </div>
-
-
-          </div>
-
-        </div>
+       
       </div>
 
 
 
 `
-
 weatherDataContainer.innerHTML= allData;
 
+
+ console.log( data.forecast.forecastday[0].hour);
+
+
+  data.forecast.forecastday[0].hour.forEach(element => {
+
+    const forecastData= `
+    <div class="forecast">
+              <p>${element.time}</p>
+              <div class="inside-forecast">
+                <img class="sun" src=${element.condition.icon} alt="">
+                <div>
+                  <p>${element.temp_c} <sup>o</sup></p>
+                  <p>${element.feelslike_c} <sup>o</sup></p>
+  
+                </div>
+              </div>
+            </div>
+  
+    `;
+    allForecast.innerHTML+= forecastData;
+   });
 }
+
+
+// data.forEach(item => {
+//   const weatherHTML = `
+//     <div class="weather-item">
+//       <h2>${item.location}</h2>
+//       <div><strong>Temperature:</strong> ${item.temperature}°C</div>
+//       <div><strong>Condition:</strong> ${item.condition}</div>
+//     </div>
+//   `;
+//   weatherDataContainer.innerHTML += weatherHTML;
+// });
 
 
 // let weatherData = [
@@ -277,17 +171,8 @@ weatherDataContainer.innerHTML= allData;
 //     const weatherDataContainer = document.getElementById('weatherData');
 //     weatherDataContainer.innerHTML = ''; // Clear previous data
   
-//     data.forEach(item => {
-//       const weatherHTML = `
-//         <div class="weather-item">
-//           <h2>${item.location}</h2>
-//           <div><strong>Temperature:</strong> ${item.temperature}°C</div>
-//           <div><strong>Condition:</strong> ${item.condition}</div>
-//         </div>
-//       `;
-//       weatherDataContainer.innerHTML += weatherHTML;
-//     });
-//   }
+   
+  // }
   
 
   

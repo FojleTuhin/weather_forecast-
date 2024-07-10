@@ -125,7 +125,7 @@ padding: 40px;
   padding: 20px 20px 20px 40px;
   background-color: #405D72;
   width: 250px;
-  margin: 40px 0 40px;
+  /* margin: 40px 0 40px; */
   border-radius: 20px;
 }
 
@@ -141,10 +141,11 @@ padding: 40px;
 }
 
 
-.all-forecast{
+#allForecast{
   display: flex;
-  overflow-x: scroll;
+  flex-wrap: wrap;
   gap: 20px;
+  justify-content: center;
 }
 
 
