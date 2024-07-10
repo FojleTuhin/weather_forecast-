@@ -14,7 +14,7 @@ body {
 }
 
 
-#home-img, #phone-img{
+#home-img, #phone-img, .img{
   width: 20px;
   height: 20px;
   border: 1px solid gray;
@@ -24,6 +24,7 @@ body {
 .header{
   margin: 20px;
   width: 100%;
+ 
 }
 .nav{
   display: flex;
@@ -37,8 +38,9 @@ body {
   background-color: #758694;
   border: none;
   border-radius: 20px;
+  padding: 20px;
 }
-form ::placeholder{
+.searchOption ::placeholder{
   padding: 20px;
   color: white;
 }
@@ -64,13 +66,15 @@ form ::placeholder{
 
 main .content-center{
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .main{
-  background-image: url('download.jpeg');
+  /* background-image: url('photos/download.jpeg'); */
+  background-color: #405D72;
   width: 40%;
   padding: 40px;
+  border-radius: 20px;
  
 }
 .text{
@@ -104,6 +108,44 @@ main .content-center{
   margin-top: 40px;
 }
 
+.sun-moon{
+  width: 30%;
+background-color:#405D72;
+border-radius: 20px;
+padding: 40px;
+}
+
+.inside-sunMoon{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.forecast{
+  padding: 20px 20px 20px 40px;
+  background-color: #405D72;
+  width: 250px;
+  margin: 40px 0 40px;
+  border-radius: 20px;
+}
+
+.inside-forecast{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.sun{
+  height: 50px;
+  width: 50px;
+}
+
+
+.all-forecast{
+  display: flex;
+  overflow-x: scroll;
+  gap: 20px;
+}
 
 
 /* 

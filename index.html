@@ -11,93 +11,36 @@
 </head>
 
 <body>
-  <!-- <div class="container">
-    <header>
-      <h1>Weather Forecast</h1>
-    </header>
-    <section class="search-section">
-      <input type="text" id="searchInput" placeholder="Enter location">
-      <button onclick="searchWeather()">Search</button>
-    </section>
-    <section id="weatherData" class="weather-section">
-       Weather data will be displayed here -->
-  </section>
-  </div>
+
 
 
 
   <header class="header">
     <div class="nav">
       <div class="top">
-        <p>Dhaka, Bangladesh </p><span><img id="home-img" src="home.png" alt=""></span>
+        <p id="location">Dhaka, Bangladesh </p><span><img id="home-img" src="photos/home.png" alt=""></span>
       </div>
-      <div>
-        <form>
-          <input type="text" name="" id="input-text" placeholder="Search here">
-          <button type="submit" id="search">Search</button>
-        </form>
+      <div class="searchOption">
+
+        <input type="text" name="" id="input-text" placeholder="Search here">
+        <button onclick="searchWeather()" id="search">Search</button>
+
       </div>
       <div class="top">
-        <span><img id="phone-img" src="phone.png" alt=""></span>
+        <span><img id="phone-img" src="photos/phone.png" alt=""></span>
         <p> live weather on mobile</p>
       </div>
     </div>
+
+
   </header>
+
+
+
   <main>
-    <div class="content-center">
-      <div class="main">
-        <p class="text">Current Weather</p>
-        <p class="time">2:22 AM</p>
-
-        <div class="currentWeather">
-          <img src="//cdn.weatherapi.com/weather/64x64/night/176.png" alt="">
-          <p class="temp">28 <sup>o</sup>C</p>
-        </div>
-
-        <div class="weather-section">
-          <div class="weather">
-            <p>Air quality</p>
-            <p>189</p>
-          </div>
-          <div class="weather">
-            <p>Wind</p>
-            <p>34</p>
-          </div>
-          <div class="weather">
-            <p>Humidity</p>
-            <p>34</p>
-          </div>
-          <div class="weather">
-            <p>Feels like</p>
-            <p>343</p>
-          </div>
-        </div>
-        <div class="weather-section">
-          <div class="weather">
-            <p>Visibility</p>
-            <p>189</p>
-          </div>
-          <div class="weather">
-            <p>UV index</p>
-            <p>34</p>
-          </div>
-          <div class="weather">
-            <p>Pressure</p>
-            <p>34</p>
-          </div>
-          <div class="weather">
-            <p>Due Point</p>
-            <p>343</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="forecast-section">
-      <p class="text ">14 days forecast</p>
-      <div>
-
-      </div>
-
+    <div id="weatherDataContainer">
+      
+      
     </div>
   </main>
 
