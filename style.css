@@ -24,6 +24,7 @@ body {
 .header{
   margin: 20px;
   width: 100%;
+  padding: 20px;
  
 }
 .nav{
@@ -33,7 +34,7 @@ body {
   
 }
 
-#input-text{
+#inputText{
   height: 40px;
   background-color: #758694;
   border: none;
@@ -148,6 +149,12 @@ padding: 40px;
   justify-content: center;
 }
 
+#forecastDataContainer .text{
+  margin-top: 40px;
+  font-weight: 700;
+  text-align: center;
+  font-size: 40px;
+}
 
 /* 
 .container {
